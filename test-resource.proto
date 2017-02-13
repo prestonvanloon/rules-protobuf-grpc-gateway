@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+import "google/protobuf/any.proto";
+
+package webhooks;
+
+message ResourceA {
+	string name = 1;
+}
+
+message ResourceB {
+	int32 id = 1;
+}
+
+message ResourceC {
+	google.protobuf.Any something = 1;
+}

@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+import "test-resource.proto";
+
+package webhooks;
+
+message WebhookServiceRequest {
+	oneof resourcetype {
+		webhooks.ResourceA = 1;
+		webhooks.ResourceB = 2;
+		webhooks.ResourceC = 3;
+	}
+}
+
+message WebhookServiceResponse {
+	string status = 1;
+}

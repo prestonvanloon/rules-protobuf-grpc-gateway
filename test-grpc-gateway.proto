@@ -1,0 +1,16 @@
+syntax = "proto3"
+
+import "google/api/annotations.proto";
+
+import "test-webhook-messages.proto";
+
+package webhooks;
+
+service WebhookGateway {
+	rpc BasicWebhook (WebhookServiceRequest) returns (WebhookServiceResponse) {
+		option (google.api.http)  = {
+			post: "/v1/webhooks/basic"
+			body: "*"
+		}
+	}
+}
