@@ -1,6 +1,6 @@
 # Rules Protobuf Grpc Gateway Bug Example
 
-
+See: https://github.com/pubref/rules_protobuf/issues/64
 
 To replicate error:
 
