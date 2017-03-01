@@ -11,7 +11,7 @@ grpc_gateway_proto_library(
     ],
     inputs = [
         "@com_github_google_protobuf//:well_known_protos",
-       "@com_github_grpc_ecosystem_grpc_gateway//third_party/googleapis/google/api:go_default_library_protos",
+        "@com_github_grpc_ecosystem_grpc_gateway//third_party/googleapis/google/api:go_default_library_protos",
     ],
     protos = [
         "test-grpc-gateway.proto",

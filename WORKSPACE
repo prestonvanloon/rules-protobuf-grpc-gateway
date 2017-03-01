@@ -1,3 +1,4 @@
+# Load go rules first
 git_repository(
     name = "io_bazel_rules_go",
     remote = "https://github.com/bazelbuild/rules_go.git",
@@ -6,6 +7,8 @@ git_repository(
 load("@io_bazel_rules_go//go:def.bzl", "go_repositories")
 
 go_repositories()
+
+# Load rules protobuf
 
 git_repository(
   name = "org_pubref_rules_protobuf",
@@ -16,6 +19,5 @@ git_repository(
 
 load("@org_pubref_rules_protobuf//go:rules.bzl", "go_proto_repositories")
 go_proto_repositories()
-
 load("@org_pubref_rules_protobuf//grpc_gateway:rules.bzl", "grpc_gateway_proto_repositories")
 grpc_gateway_proto_repositories()
